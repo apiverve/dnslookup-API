@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/dnslookup",
+  "version": "1.0.0",
+  "description": "DNS Lookup is a simple tool for looking up the DNS records of a domain. It returns the A, MX, and other records of the domain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/dnslookup-API.git"
+  },
+  "keywords": [
+    "dns"," dns lookup"," dns records"," dns lookup api"," dns records api"," dns lookup tool"," dns records tool"," dns lookup software"," dns records software"," dns lookup service"," dns records service"," dns lookup library"," dns records library"," dns lookup sdk"," dns records sdk"," dns lookup code"," dns records code"," dns lookup script"," dns records script"," dns lookup program"," dns records program"," dns lookup application"," dns records application"," dns lookup app"," dns records app"," dns lookup tool"," dns records tool"," dns lookup utility"," dns records utility"," dns lookup helper"," dns records helper"," dns lookup helper tool"," dns records helper tool"," dns lookup helper software"," dns records helper software"," dns lookup helper service"," dns records helper service"," dns lookup helper library"," dns records helper library"," dns lookup helper sdk"," dns records helper sdk"," dns lookup helper code"," dns records helper code"," dns lookup helper script"," dns records helper script"," dns lookup helper program"," dns records helper program"," dns lookup helper application"," dns records helper application"," dns lookup helper app"," dns records helper app"," dns lookup helper tool"," dns records helper tool"," dns lookup helper utility"," dns records helper utility"," dns lookup helper"," dns records helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/dnslookup-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/dnslookup-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
