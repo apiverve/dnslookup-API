@@ -1,5 +1,4 @@
-DNS Lookup API
-============
+# DNS Lookup API
 
 DNS Lookup is a simple tool for looking up the DNS records of a domain. It returns the A, MX, and other records of the domain.
 
@@ -7,54 +6,62 @@ DNS Lookup is a simple tool for looking up the DNS records of a domain. It retur
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [DNS Lookup API](https://apiverve.com/marketplace/api/dnslookup)
+This is a Javascript Wrapper for the [DNS Lookup API](https://apiverve.com/marketplace/dnslookup)
 
 ---
 
 ## Installation
-	npm install @apiverve/dnslookup --save
+
+Using npm:
+```shell
+npm install @apiverve/dnslookup
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/dnslookup
+```
 
 ---
 
 ## Configuration
 
-Before using the dnslookup API client, you have to setup your account and obtain your API Key.  
+Before using the DNS Lookup API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The DNS Lookup API documentation is found here: [https://docs.apiverve.com/api/dnslookup](https://docs.apiverve.com/api/dnslookup).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The DNS Lookup API documentation is found here: [https://docs.apiverve.com/ref/dnslookup](https://docs.apiverve.com/ref/dnslookup).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var dnslookupAPI = require('@apiverve/dnslookup');
-var api = new dnslookupAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const dnslookupAPI = require('@apiverve/dnslookup');
+const api = new dnslookupAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   domain: "myspace.com"
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -64,9 +71,52 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  domain: "myspace.com"
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  domain: "myspace.com"
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -134,8 +184,7 @@ api.execute(query, function (error, data) {
         ]
       ]
     }
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -148,6 +197,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
@@ -161,7 +211,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2025 APIVerve, and Evlar LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
