@@ -1,24 +1,26 @@
 {
   "name": "@apiverve/dnslookup",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "DNS Lookup is a simple tool for looking up the DNS records of a domain. It returns the A, MX, and other records of the domain.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "example": "node examples/basic.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apiverve/dnslookup-API.git"
   },
   "keywords": [
-    "dns","dns lookup","dns records","dns lookup api","dns records api"
+    "dns", "dns lookup", "dns records", "dns lookup api", "dns records api"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/dnslookup-API/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/api/dnslookup?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/dnslookup?utm_source=npm",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
@@ -27,6 +29,6 @@
   "dependencies": {
     "node-fetch": "^3.3.2",
     "promise": "^8.3.0",
-    "axios": "1.7.9"
+    "axios": "1.13.2"
   }
 }
